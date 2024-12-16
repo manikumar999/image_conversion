@@ -9,7 +9,7 @@ from openai import OpenAI
 
 client = OpenAI()
 
-#os.environ['OPENAI_API_KEY']="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"
+os.environ['OPENAI_API_KEY']="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"
 
 def process_images_extract_json(base64_images):
     response = client.chat.completions.create(
