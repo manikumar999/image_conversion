@@ -7,6 +7,12 @@ from io import BytesIO
 import base64
 from openai import OpenAI
 
+# Retrieve API key securely
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise ValueError("API key not found. Please set it as an environment variable.")
+client = OpenAI(api_key=api_key)
+
 client = OpenAI()
 
 os.environ['OPENAI_API_KEY']="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"
